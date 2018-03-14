@@ -79,7 +79,7 @@ export class PhomeComponent implements OnInit, OnDestroy {
     }
     public searchSong() {
         console.log(this.search);
-        this.http.get(`http://api.napster.com/v2.2/search?apikey=MjM4OWE1MzQtNTUyMy00ODIzLWEyNTMtNDQ1MzFlN2ExYzll&query='${this.search}'&type=track&per_type_limit=5`)
+        this.http.get(`http://api.napster.com/v2.2/search?apikey=MjM4OWE1MzQtNTUyMy00ODIzLWEyNTMtNDQ1MzFlN2ExYzll&query='${this.search}'&type=track&per_type_limit=4`)
             .subscribe((res: Response) => {
                 const data = res.json();
                 console.log(data.search.data.tracks);
